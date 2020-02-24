@@ -2,21 +2,6 @@ import pygame as pg
 import sys
 from pygame.locals import *
 
-SW = 800
-SH = 600
-BW = 50
-BH = 50
-
-BLACK = (0,0,0)
-WHITE = (255,255,255)
-
-pg.font.init()
-FONT = pg.font.Font(pg.font.get_default_font(),20)
-
-pg.display.init()
-Display = pg.display.set_mode((SW,SH))
-pg.display.set_caption("Correct Path")
-
 def CorrectPath(string):
   CheckingRect = FONT.render("Checking",True,WHITE).get_rect()
   CheckingRect.center = (SW/2,SH/2)
@@ -118,6 +103,23 @@ def CorrectPath(string):
       for i in range(5):
         fivefivegrid.append(["x","x","x","x","x"])
   return ("".join(resstring),fivefivegrid)
+
+
+
+SW = 800
+SH = 600
+BW = 50
+BH = 50
+
+BLACK = (0,0,0)
+WHITE = (255,255,255)
+
+pg.font.init()
+FONT = pg.font.Font(pg.font.get_default_font(),20)
+
+pg.display.init()
+Display = pg.display.set_mode((SW,SH))
+pg.display.set_caption("Correct Path")
 
 def main():
 
